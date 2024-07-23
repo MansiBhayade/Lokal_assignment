@@ -28,13 +28,15 @@ class HomeFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
+        val bookmarkDao = (requireActivity().application as JobsApp).database.bookmarkDao()
+
         recyclerView = view.findViewById(R.id.recycler_view)
         progressBar = view.findViewById(R.id.progress_bar)
         errorText = view.findViewById(R.id.error_text)
         emptyText = view.findViewById(R.id.empty_text)
 
         recyclerView.layoutManager = LinearLayoutManager(context)
-        jobsAdapter = JobsAdapter(jobsList)
+        jobsAdapter = JobsAdapter(requireContext(),jobsList,bookmarkDao)
         recyclerView.adapter = jobsAdapter
 
         Log.d("HomeFragment", "RecyclerView and Adapter set")

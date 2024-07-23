@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name=".JobsApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -30,6 +31,10 @@
         <activity android:name=".JobsAdapter"></activity>
         <activity android:name=".TestApiService"></activity>
         <activity android:name=".Job"></activity>
+        <activity android:name=".AppDatabase"></activity>
+        <activity android:name=".BookMarkDao"></activity>
+        <activity android:name=".BookMark"></activity>
+
 
 
     </application>

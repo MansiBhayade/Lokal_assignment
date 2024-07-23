@@ -6,6 +6,7 @@ data class JobsDataResponse(
 
 
 data class Job (
+    val id : Long,
     val title: String,
     val whatsapp_no: Long,
     val salary_max: Int,
