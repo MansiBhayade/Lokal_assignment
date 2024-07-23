@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.bottomNav, fragment)
+        transaction.replace(R.id.content_frame, fragment)
         transaction.commit()
     }
 }
