@@ -60,10 +60,10 @@ class HomeFragment : Fragment() {
             override fun onResponse(call: Call<JobsDataResponse>, response: Response<JobsDataResponse>) {
                 if (response.isSuccessful) {
                     response.body()?.let {
-                        Log.d("HomeFragment", "Response received: ${it.results}")
+//                        Log.d("HomeFragment", "Response received: ${it.results}")
                         jobsList.clear()
                         jobsList.addAll(it.results)
-                        Log.d("HomeFragment", "Jobs List: $jobsList")
+//                        Log.d("HomeFragment", "Jobs List: $jobsList")
                         jobsAdapter.notifyDataSetChanged()
                         if (jobsList.isEmpty()) {
                             showEmptyState()

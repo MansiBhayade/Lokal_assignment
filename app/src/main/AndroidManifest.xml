@@ -34,6 +34,8 @@
         <activity android:name=".AppDatabase"></activity>
         <activity android:name=".BookMarkDao"></activity>
         <activity android:name=".BookMark"></activity>
+        <activity android:name=".BookMarkAdapter"></activity>
+        <activity android:name=".DetailsActivity"></activity>
 
 
 

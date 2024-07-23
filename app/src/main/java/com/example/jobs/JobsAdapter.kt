@@ -1,12 +1,14 @@
 package com.example.jobs
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -45,18 +47,26 @@ class JobsAdapter(private val context: Context,
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JobViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_job, parent, false)
-        Log.d("JobsAdapter", "onCreateViewHolder called")
+//        Log.d("JobsAdapter", "onCreateViewHolder called")
         return JobViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: JobViewHolder, position: Int) {
         val job = jobs[position]
-        Log.d("JobsAdapter", "Binding job: ${job.title}")
+//        Log.d("JobsAdapter", "Binding job: ${job.title}")
         holder.title.text = job.title
         holder.contact_no.text = "☎️ ${job.whatsapp_no}"
         holder.salary_min.text = "Salary: ₹${job.salary_min}"
         holder.salary_max.text = "₹${job.salary_max}"
          holder.Place.text = "Place : ${job.primary_details?.Place ?:"Location not available"}"
+
+
+        holder.itemView.setOnClickListener{
+            val intent = Intent(context,DetailsActivity::class.java ).apply {
+                putExtra("JOB_ID", job.id)
+            }
+            context.startActivity(intent)
+        }
 
         holder.bookmark.setImageResource(
             if (bookmarkedJobs.contains(job.id)) R.drawable.ic_bookmark
@@ -101,7 +111,6 @@ class JobsAdapter(private val context: Context,
 
 
     override fun getItemCount(): Int {
-        Log.d("JobsAdapter", "getItemCount called: ${jobs.size}")
         return jobs.size
     }
 }

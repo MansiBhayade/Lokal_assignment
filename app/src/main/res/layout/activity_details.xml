@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#5F5C5C"
+        android:textSize="14sp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/whatsapp_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#E24444"
+        android:textSize="14sp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/job_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#5F5C5C"
+        android:textSize="14sp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/job_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#DF3636"
+        android:textSize="14sp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/job_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#5F5C5C"
+        android:textSize="14sp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/no_applicants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#191616"
+        android:textSize="14sp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/job_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#5F5C5C"
+        android:textSize="14sp"
+        android:layout_margin="8dp"/>
+
+
+</LinearLayout>

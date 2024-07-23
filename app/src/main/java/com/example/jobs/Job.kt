@@ -11,6 +11,12 @@ data class Job (
     val whatsapp_no: Long,
     val salary_max: Int,
     val salary_min: Int,
+    val company_name: String,
+    val job_hours: String,
+    val job_role: String,
+    val job_category: String,
+    val other_details: String,
+    val num_applicantions: Int,
     val primary_details: primary_details?
 
 )
