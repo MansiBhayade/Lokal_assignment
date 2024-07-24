@@ -40,7 +40,6 @@ class HomeFragment : Fragment() {
         recyclerView.adapter = jobsAdapter
 
         Log.d("HomeFragment", "RecyclerView and Adapter set")
-
         fetchjobs()
 
         return view
